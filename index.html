@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Survey Form</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Krona+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+ 
+</head>
+
+<body>
+<!--Questions taken from https://www.surveymonkey.com-->
+
+  <h1 id="title">Survey Form</h1>
+  <div>
+    <p id="description">Let us know what do you think about organ donation</p>
+  </div>
+
+  <form id="survey-form">
+    <fieldset class="identity">
+      <div class="grouped">
+        <label for="name" id="name-label">Name:</label>
+        <input type="text" name="full name" id="name" autocomplete="on" placeholder="Enter your name: " id="name" required>
+      </div>
+
+      <div class="grouped">
+        <label for="email" id="email-label">E-mail:</label>
+        <input  id="email" type="email" name="email" autocomplete="on" required placeholder="Enter your e-mail: ">
+      </div>
+
+      <div class="grouped">
+        <label for="gender">Gender:</label>
+        <select class="gender" id="dropdown" required>
+        <option value="female">Female</option>
+        <option value="male">Male</option>
+        <option value="intersex">Intersex</option>
+        <option value="other">Other</option>
+        <option value="notsay">Rather not say</option>
+      </select>
+      </div>
+
+      <div class="grouped">
+        <label for="age" id="number-label">Age:</label>
+        <input type="number" id="number" name="age" min="1" max="130" required placeholder="Your age here: ">
+      </div>
+
+    </fieldset>
+
+    <fieldset class="questions">
+
+      <p class="q">1. Do you know the regulations in your country for the donation and transplantation of human organs?</p>
+      <div class="radios">
+      </div>
+
+      <p class="q">2. Would you be willing to donate one of your organs to an organ donation service immediately after your death?</p>
+      <section class="radios">
+      </section>
+
+      <p class="q">3. If you were asked in a hospital to donate an organ from a deceased close family member, would you agree?</p>
+      <div class="radios">
+      </div>
+
+      <p class="q">4. Are there any particular reasons that make you less likely to donate your organs or family member’s organs upon death? You can choose more than one answer:</p>
+      
+      <div class="checkboxes">
+        <input type="checkbox" name="one" value="medical">I cannot donate my organs because of medical reasons<br>
+        <input type="checkbox" name="two" value="religion">This is against my religion<br>
+        <input type="checkbox" name="three" value="braindead">I am afraid to donate because it is possible for a brain-dead person to recover from his/her injuries<br>
+        <input type="checkbox" name="four" value="body">I do not want my body cut up or disfigured<br>
+        <input type="checkbox" name="five" value="trust">I don’t trust medical system. Knowing I am a donor, doctors will be less likely to try to save my life<br>
+        <input type="checkbox" name="six" value="thought">I don’t like the thought of it. Such thoughts increase the chance I will die<br>
+        <input type="checkbox" name="seven" value="people">Transplants often go to undeserving people<br>
+        <input type="checkbox" name="eight" value="other">Other (please specify)<br>
+        <input type="text" name="eightreason" maxlength="300" class="motivation">
+      </div>
+
+      <p class="q">5. If you are willing to be an organ donor, what are your reasons? You can choose more than one answer:</p>
+      
+      <div class="checkboxes">
+        <input type="checkbox" name="one" value="noneed">I think after I die, I do not need my organs anymore<br>
+        <input type="checkbox" name="two" value="save">I like the idea that after I die, I could save someone’s live<br>
+        <input type="checkbox" name="three" value="important">I have a close friend/family member who needs organ transplantation. So I realize the importance of it<br>
+        <input type="checkbox" name="four" value="help">I think if I died, my family would find solace in the idea the part of me is still alive and helps someone else live<br>
+        <input type="checkbox" name="five" value="other">Other (please specify)<br>
+        <input type="text" name="fivereason" maxlength="300" class="motivation">
+      </div>
+
+      <p class="q">6. Some countries presume that people wish to donate their organs at death. This is called presumed consent. Do you agree with the idea that everyone should be automatically included on the Organ Donor Register with the ability to opt out if they wish?</p>
+      <div class="radios"></div>
+
+      <p class="q">7. If you do not support presumed consent system, what are your reasons. (You can choose more than one answer). If you support this system, skip to next question</p>
+      
+      <div class="checkboxes">
+        <input type="checkbox" name="one" value="ethics">It is unethical<br>
+        <input type="checkbox" name="two" value="rights">It is a violation of my rights<br>
+        <input type="checkbox" name="three" value="gov">I distrust the government and system<br>
+        <input type="checkbox" name="four" value="belief">I do not believe a system of presumed consent would increase a number of available organs for transplantation<br>
+        <input type="checkbox" name="five" value="other">Other (please specify)<br>
+        <input type="text" name="fivereason" maxlength="300" class="motivation">
+      </div>
+
+      <p class="q">8. Some organs such as kidney or part of livers can be donated while you are alive. How likely are you to donate an organ while you are living to? You can choose more than one answer:</p>
+      
+      <div class="checkboxes">
+        <input type="checkbox" name="one" value="family">I could only do this for a loved one (family member or close friend)<br>
+        <input type="checkbox" name="two" value="notdo">I could not do it in any case<br>
+        <input type="checkbox" name="three" value="need"> I could donate my kidney (or other organ) to someone I do not know. If they are in a great need
+        <br>
+        <input type="checkbox" name="four" value="paid">Perhaps, I would have donated my organ, if I got paid for it<br>
+        <input type="checkbox" name="five" value="other">Other (please specify)<br>
+        <input type="text" name="fivereason" maxlength="300" class="motivation">
+      </div>
+
+      <p class="q">9. Do you think the sale of human organs should be legalized?</p>
+      <div class="radios"></div>
+
+      <p class="q">10. If you or your loved one needs a transplant and you have the opportunity to buy an organ from a living donor, will you buy it?</p>
+      <div class="radios"></div>
+      
+      <p class="q">Please let us know any other thoughts you have on organ donation that were not covered above:</p>
+      <textarea rows="10" cols="70"></textarea>
+
+    </fieldset>
+
+    <div class="sub">
+      <button type="submit" id="submit">Submit</button>
+    </div>
+
+  </form>
+
+  <footer>Coded by Cremzoo
+    <footer>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  
+  <script  src="js/index.js"></script>
+
+</body>
+
+</html>
